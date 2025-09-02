@@ -2,8 +2,20 @@
 const sceltaUtente = prompt("Scegli se giocare pari o dispari").toLowerCase(); //Scelta della giocata con conversione in minuscolo per sicurezza 
 const sceltaUtenteNumero = parseInt(prompt("Scegli un numero da 1 a 5")); //Scelta del numeroda parte del giocatore 
 
+//Dichiaro 2 variabili
+const numMin = 1;
+const numMax = 5;
+
 //Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
-const randomNumber = Math.floor(Math.random() * 5) + 1;
+function RandomNumber (numMin,numMax) {
+    const minNum = Math.ceil(1);
+    const maxNum = Math.ceil(5);
+
+    return Math.floor(Math.random() * (maxNum - minNum + 1) + minNum);
+}
+
+//Assegniamo il numero random
+let randomNumber = RandomNumber();
 
 //Mandiamo in stampa le scelte fatte
 console.log(`Hai scelto ${sceltaUtente} e il numero ${sceltaUtenteNumero}`);
