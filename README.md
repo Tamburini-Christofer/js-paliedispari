@@ -1,0 +1,1 @@
+![Immagine finale](image.png)
